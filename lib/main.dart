@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:month_picker_dialog_2/month_picker_dialog_2.dart';
 
 void main() {
   runApp(const MyApp());
@@ -31,6 +32,7 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   String _selectionDate = "";
   String _selectionTime = "";
+  String _selectionMonth = "";
 
   @override
   Widget build(BuildContext context) {
@@ -58,6 +60,14 @@ class _MyHomePageState extends State<MyHomePage> {
               "時間を選択する",
               _selectionTime,
             ),
+            _buttonAndLabel(
+              () async {
+                final selectedDate = await showMonthPicker(context: context, initialDate: DateTime.now());
+                _setMonth(selectedDate);
+              },
+              "年月を選択する",
+              _selectionMonth,
+            )
           ],
         ),
       ),
@@ -95,6 +105,16 @@ class _MyHomePageState extends State<MyHomePage> {
         _selectionTime = "";
       } else {
         _selectionTime = "時間: ${timeOfDay.format(context)}";
+      }
+    });
+  }
+
+  void _setMonth(DateTime? dateTime) {
+    setState(() {
+      if (dateTime == null) {
+        _selectionMonth = "";
+      } else {
+        _selectionMonth = "年月: ${dateTime.year}年${dateTime.month}月";
       }
     });
   }
