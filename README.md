@@ -4,13 +4,14 @@ date & time selection sample
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+日付や時刻選択のサンプルFlutterアプリケーション
 
-A few resources to get you started if this is your first Flutter project:
+以下の環境で動作します。
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+```
+$ flutter --version
+Flutter 3.3.1 • channel stable • https://github.com/flutter/flutter.git
+Framework • revision 4f9d92fbbd (6 months ago) • 2022-09-06 17:54:53 -0700
+Engine • revision 3efdf03e73
+Tools • Dart 2.18.0 • DevTools 2.15.0
+```
